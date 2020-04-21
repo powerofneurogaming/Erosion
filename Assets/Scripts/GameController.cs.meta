@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 068d5776c39fb0246af7f3e391ac688a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - rock1: {instanceID: 0}
+  - rock2: {instanceID: 0}
+  - rock3: {instanceID: 0}
+  - rock4: {instanceID: 0}
+  - rock5: {instanceID: 0}
+  - spike: {fileID: 5611213120880584019, guid: c6ed0450d1e77d0499af8f92b813f877, type: 3}
+  - background: {instanceID: 0}
+  - player: {instanceID: 0}
+  - currentPlayer: {instanceID: 0}
+  - nextLevelView: {instanceID: 0}
+  - gameOverView: {instanceID: 0}
+  - levelInput: {instanceID: 0}
+  - progressBar: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
