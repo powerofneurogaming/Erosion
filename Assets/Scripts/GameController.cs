@@ -16,6 +16,7 @@ public class GameController : SingletonMonoBehaviour<GameController>
 
     public Coroutine levelCoroutine;
 
+    public GameObject Rocks;
     public GameObject rock1;
     public GameObject rock2;
     public GameObject rock3;
@@ -57,43 +58,44 @@ public class GameController : SingletonMonoBehaviour<GameController>
 
     public void FillLevels()
     {
-        GameObject[] level0 = new GameObject[] { rock3 };
+        
+        GameObject[] level0 = new GameObject[] { Rocks };
         LevelList.Add(level0);
 
-        GameObject[] level1 = new GameObject[] { rock1 };
+        GameObject[] level1 = new GameObject[] { Rocks };
         LevelList.Add(level1);
 
-        GameObject[] level2 = new GameObject[] { rock2, rock2 };
+        GameObject[] level2 = new GameObject[] { rock1, rock1 };
         LevelList.Add(level2);
 
-        GameObject[] level3 = new GameObject[] { rock4 };
+        GameObject[] level3 = new GameObject[] { rock1 };
         LevelList.Add(level3);
 
-        GameObject[] level4 = new GameObject[] { rock5 };
+        GameObject[] level4 = new GameObject[] { rock1 };
         LevelList.Add(level4);
 
-        GameObject[] level5 = new GameObject[] { rock1 , rock2 };
+        GameObject[] level5 = new GameObject[] { rock1 , rock1 };
         LevelList.Add(level5);
 
-        GameObject[] level6 = new GameObject[] { rock5, rock3 };
+        GameObject[] level6 = new GameObject[] { rock1, rock1 };
         LevelList.Add(level6);
 
-        GameObject[] level7 = new GameObject[] { rock3, rock1, rock3 };
+        GameObject[] level7 = new GameObject[] { rock1, rock1, rock1 };
         LevelList.Add(level7);
 
-        GameObject[] level8 = new GameObject[] { rock4, rock5 };
+        GameObject[] level8 = new GameObject[] { rock1, rock1 };
         LevelList.Add(level8);
 
-        GameObject[] level9 = new GameObject[] { rock1, rock5, rock2 };
+        GameObject[] level9 = new GameObject[] { rock1, rock1, rock1 };
         LevelList.Add(level9);
 
-        GameObject[] level10 = new GameObject[] { rock2, rock1, rock2, rock1 };
+        GameObject[] level10 = new GameObject[] { rock1, rock1, rock1, rock1 };
         LevelList.Add(level10);
 
-        GameObject[] level11 = new GameObject[] { rock4, rock1, rock3,rock2 };
+        GameObject[] level11 = new GameObject[] { rock1, rock1, rock1, rock1 };
         LevelList.Add(level11);
 
-        GameObject[] level12 = new GameObject[] { rock2, rock2, rock2, rock2, rock2 };
+        GameObject[] level12 = new GameObject[] { rock1, rock2, rock2, rock2, rock2 };
         LevelList.Add(level12);
 
         GameObject[] level13 = new GameObject[] { rock1, rock3, rock3,rock1 };
@@ -266,11 +268,20 @@ public class GameController : SingletonMonoBehaviour<GameController>
     {
         levelCoroutine =  StartCoroutine(RunLevel(currentLevel));
     }
+
     public void StartGame()
     {
         int temp = int.Parse(levelInput.text);
-        currentLevel = temp-1;
-       levelCoroutine = StartCoroutine(RunLevel(currentLevel));
+        if (temp <= 0)
+        {
+            levelCoroutine = StartCoroutine(RunLevel(0));
+        }
+        else
+        {
+            currentLevel = temp - 1;
+            levelCoroutine = StartCoroutine(RunLevel(currentLevel));
+        }
+        
 
     }
 

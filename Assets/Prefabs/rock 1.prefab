@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4792352858780851394}
   - component: {fileID: 4792352858780851405}
   - component: {fileID: 4792352858780851404}
-  - component: {fileID: -8817592865690499673}
+  - component: {fileID: 9059178671804913522}
   m_Layer: 8
   m_Name: rock 1
   m_TagString: rock
@@ -120,7 +120,7 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &-8817592865690499673
+--- !u!114 &9059178671804913522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,13 +129,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4792352858780851407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d3e41e9634b7e642bc096fce9ca03d7, type: 3}
+  m_Script: {fileID: 11500000, guid: a746975c971c98247916cd496d2fb408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  rocks: []
-  rockDirection: 0
   life: 0
-  lifeText: {fileID: 8382492214904107000, guid: 181828c84ac094544b041be929ceeb85,
-    type: 3}
-  tempText: {fileID: 0}
+  allRocks: []
+  rockDirection: 0

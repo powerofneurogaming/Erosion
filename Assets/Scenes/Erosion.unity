@@ -18818,6 +18818,7 @@ MonoBehaviour:
   waitTime: 0
   rocksDestroyed: 0
   rocksInLevel: 0
+  Rocks: {fileID: 4792352858780851407, guid: 2b0830e0b7a6db74aaaec38716ff80e6, type: 3}
   rock1: {fileID: 4792352858780851407, guid: 2b0830e0b7a6db74aaaec38716ff80e6, type: 3}
   rock2: {fileID: 8380963858206057308, guid: c58b591d15750554e97c52134d7a32d7, type: 3}
   rock3: {fileID: 4989389220976248280, guid: 2d03486e839a2b444992defb0c3108fa, type: 3}
@@ -26774,7 +26775,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194429794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 24.7, z: 0}
+  m_LocalPosition: {x: 0, y: 10.3, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 560766689}
