@@ -65,13 +65,13 @@ public class GameController : SingletonMonoBehaviour<GameController>
         GameObject[] level1 = new GameObject[] { Rocks };
         LevelList.Add(level1);
 
-        GameObject[] level2 = new GameObject[] { rock1, rock1 };
+        GameObject[] level2 = new GameObject[] { Rocks, Rocks };
         LevelList.Add(level2);
 
-        GameObject[] level3 = new GameObject[] { rock1 };
+        GameObject[] level3 = new GameObject[] { Rocks };
         LevelList.Add(level3);
 
-        GameObject[] level4 = new GameObject[] { rock1 };
+        GameObject[] level4 = new GameObject[] { Rocks };
         LevelList.Add(level4);
 
         GameObject[] level5 = new GameObject[] { rock1 , rock1 };
