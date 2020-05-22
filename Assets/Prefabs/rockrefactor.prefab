@@ -133,12 +133,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  iniLife: 50
+  iniLife: 150
   life: 50
-  speed: 10
+  speed: 4
   bouncing: 0
-  splitCount: 2
+  splitCount: 0
   splitMultiplier: 2
-  lifeText: {fileID: 0}
+  lifeText: {fileID: 8382492214904107000, guid: 181828c84ac094544b041be929ceeb85,
+    type: 3}
   temptText: {fileID: 0}
   velocity: {x: 0, y: 0, z: 0}

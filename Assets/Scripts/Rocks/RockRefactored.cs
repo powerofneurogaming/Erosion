@@ -15,9 +15,11 @@ public class RockRefactored : MonoBehaviour
     public int splitMultiplier = 0;
 
     public TMP_Text lifeText;
-    public TMP_Text temptText;
+    public TMP_Text tempText;
 
     public Vector3 velocity;
+
+    public float waitTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,12 @@ public class RockRefactored : MonoBehaviour
         {
             StartCoroutine(InitialMovement());
         }
+
+        GameObject worldCanvas = GameObject.Find("Canvas World");
+        tempText = Instantiate(lifeText, transform.position, Quaternion.identity);
+        tempText.transform.SetParent(worldCanvas.transform, false);
+        tempText.text = life.ToString();
+
     }
 
     IEnumerator InitialMovement()
@@ -58,6 +66,7 @@ public class RockRefactored : MonoBehaviour
     void Update()
     {
         transform.Translate(velocity * Time.deltaTime);
+        tempText.transform.position = transform.position;
         //if (life <= 0) { DestoryRock(); }
     }
 
@@ -67,6 +76,7 @@ public class RockRefactored : MonoBehaviour
         {
             life--;
              Destroy(collision.gameObject);
+            tempText.text = life.ToString();
             if (life <= 0) { DestoryRock(); }
            
         }
@@ -116,6 +126,6 @@ public class RockRefactored : MonoBehaviour
             }
         }
         Destroy(gameObject);
-        //GameController.instance.NextLevelCheck();
+        GameController.instance.NextLevelCheck();
     }
 }
