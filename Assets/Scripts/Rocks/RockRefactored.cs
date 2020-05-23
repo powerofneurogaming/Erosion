@@ -125,6 +125,7 @@ public class RockRefactored : MonoBehaviour
                 obj.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             }
         }
+        Destroy(tempText.gameObject);
         Destroy(gameObject);
         GameController.instance.NextLevelCheck();
     }
