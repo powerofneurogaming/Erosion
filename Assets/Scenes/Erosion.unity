@@ -2830,7 +2830,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -9780,7 +9780,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13392,7 +13392,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -18818,7 +18818,7 @@ MonoBehaviour:
   waitTime: 0
   rocksDestroyed: 0
   rocksInLevel: 0
-  Rocks: {fileID: 4792352858780851407, guid: 2b0830e0b7a6db74aaaec38716ff80e6, type: 3}
+  Rocks: {fileID: 4792352858780851407, guid: 883776d818d3cbd42b01272e9adf92ae, type: 3}
   rock1: {fileID: 4792352858780851407, guid: 2b0830e0b7a6db74aaaec38716ff80e6, type: 3}
   rock2: {fileID: 8380963858206057308, guid: c58b591d15750554e97c52134d7a32d7, type: 3}
   rock3: {fileID: 4989389220976248280, guid: 2d03486e839a2b444992defb0c3108fa, type: 3}
@@ -26791,7 +26791,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -30004,7 +30004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1519748369
 Transform:
   m_ObjectHideFlags: 0
