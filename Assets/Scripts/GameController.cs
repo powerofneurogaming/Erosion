@@ -43,6 +43,9 @@ public class GameController : SingletonMonoBehaviour<GameController>
     public TMP_InputField levelInput;
     public Slider progressBar;
 
+    //Nathan created this AudioController script;
+    public AudioScript AudioScript;
+
     public override void Start()
     {
         base.Start();
@@ -50,11 +53,13 @@ public class GameController : SingletonMonoBehaviour<GameController>
         currentLevel = PlayerPrefs.GetInt("levelNumber", 0);
         FillLevels();
         MakeNewPlayer();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        StartCoroutine(DropSpikes(.5f, 4));
 
     }
     int levelDifficulty;
@@ -167,10 +172,13 @@ public class GameController : SingletonMonoBehaviour<GameController>
     {
         while (spikeCount < numSpikes)
         {
-            Instantiate(spike, new Vector3(0f, 5.5f, -.5f), Quaternion.identity);
-            yield return new WaitForSeconds(dropFeq);
+            float xPos = Random.Range(-15, 16);
+            Instantiate(spike, new Vector3(xPos, 5.5f, 0f), Quaternion.identity);
             spikeCount++;
+
+            yield return new WaitForSeconds(dropFeq);
         }
+        yield return new WaitForSeconds(8f);
     }
     public void ProgressBarMove()
     {
@@ -308,7 +316,9 @@ public class GameController : SingletonMonoBehaviour<GameController>
             currentLevel = temp - 1;
             levelCoroutine = StartCoroutine(RunLevel(currentLevel));
         }
-        
+        //Nathan's code to activate the music set in the AudioController script;
+        AudioScript = GameObject.Find("AudioController").GetComponent<AudioScript>();
+        AudioScript.playMusic();
 
     }
 
@@ -352,7 +362,6 @@ public class GameController : SingletonMonoBehaviour<GameController>
             
             waitTime = LevelList[level][i].waitTimer;
             yield return new WaitForSeconds(waitTime);
-            StartCoroutine(DropSpikes(.5f, 4));
 
 
         }
